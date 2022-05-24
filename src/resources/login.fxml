@@ -45,7 +45,7 @@
                   <Font name="Calibri" size="10.0" />
                </font>
             </Label>
-            <Label fx:id="error" layoutX="182.0" layoutY="100.0" prefHeight="28.0" prefWidth="234.0">
+            <Label fx:id="error" layoutX="182.0" layoutY="86.0" prefHeight="42.0" prefWidth="234.0">
                <font>
                   <Font name="Calibri Bold" size="12.0" />
                </font>

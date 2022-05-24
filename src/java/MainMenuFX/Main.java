@@ -7,11 +7,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    Firebase.FirebaseService firebase = new Firebase.FirebaseService();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        firebase.initialize();
         Parent root = FXMLLoader.load(getClass().getResource("/login.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Login Page");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
