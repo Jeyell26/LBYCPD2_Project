@@ -40,7 +40,7 @@
                   <Font name="Calibri Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="183.0" layoutY="64.0" opacity="0.27" text="Welcome to our Binary Search Dictionary">
+            <Label layoutX="183.0" layoutY="64.0" opacity="0.27" text="Welcome to our LBYCPD2">
                <font>
                   <Font name="Calibri" size="10.0" />
                </font>
