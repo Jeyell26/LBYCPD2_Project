@@ -73,10 +73,8 @@ public class LoginController implements Initializable {
                 try {
                     error.setText(getType(user.getText()) + " login! Welcome " + user.getText());
                     error.setStyle("-fx-text-fill: green");
-                } catch (ExecutionException executionException) {
+                } catch (ExecutionException | InterruptedException executionException) {
                     executionException.printStackTrace();
-                } catch (InterruptedException interruptedException) {
-                    interruptedException.printStackTrace();
                 }
 
             }
