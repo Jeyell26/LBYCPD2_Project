@@ -158,7 +158,6 @@ public class LoginController implements Initializable {
         document = future.get();
 
         return document.getString("Type");
-
     }
 
 }

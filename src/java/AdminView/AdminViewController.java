@@ -38,6 +38,8 @@ public class AdminViewController implements Initializable {
         Platform.runLater(this::setWelcome);
         adminTools.setDisable(true); // To be implemented later on
         Back.setOnAction(e -> x.switchScene(e,"login","Login Page"));
+        inventory.setOnAction(e -> x.switchScene(e, "inventory", "Inventory Page"));
+        product.setOnAction(e -> x.switchScene(e, "product", "Product Page"));
     }
 
     public void setWelcome(){
