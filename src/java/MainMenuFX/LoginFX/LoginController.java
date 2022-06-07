@@ -73,14 +73,15 @@ public class LoginController implements Initializable {
                 try {
                     error.setText(getType(user.getText()) + " login! Welcome " + user.getText());
                     error.setStyle("-fx-text-fill: green");
+                    setLogin(e,getType(user.getText()),user.getText());
                 } catch (ExecutionException | InterruptedException executionException) {
                     executionException.printStackTrace();
                 }
 
             }
-            this.user.clear();
             this.pass.clear();
             this.showPass.clear();
+            this.user.clear();
         });
 
         back.setOnAction(this::setBack);
@@ -112,8 +113,9 @@ public class LoginController implements Initializable {
         x.switchScene(e,"main","Main Menu");
     }
 
-    private void setLogin(ActionEvent e, String input) {
-        x.switchScene(e,"menu","Menu", input);
+    private void setLogin(ActionEvent e, String input, String user) {
+        x.switchScene(e,input,input + " Page", user);
+
     }
 
     // whether inputted user details matches
