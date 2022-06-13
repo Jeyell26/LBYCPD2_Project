@@ -10,7 +10,7 @@ public class OrderView extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/Archive/main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/src/Archive/main.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
