@@ -27,7 +27,6 @@
       <Button fx:id="add" layoutX="618.0" layoutY="605.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Add" />
       <Button fx:id="del" layoutX="618.0" layoutY="647.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Delete" />
       <TextField fx:id="titleTF" layoutX="440.0" layoutY="605.0" promptText="Insert New Title Here" />
-      <TextField fx:id="searchTF" layoutX="166.0" layoutY="84.0" prefHeight="25.0" prefWidth="349.0" promptText="Search Here!" />
-      <Button fx:id="search" layoutX="54.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Search" />
+      <TextField fx:id="searchTF" layoutX="59.0" layoutY="86.0" prefHeight="25.0" prefWidth="349.0" promptText="Search Here!" />
    </children>
 </AnchorPane>

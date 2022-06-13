@@ -114,6 +114,8 @@ public class InventoryController implements Initializable {
                 }
             };
         });
+
+        back.setOnAction(e -> x.switchScene(e,"Administrator","Administrator"));
     }
 
     // Del item based on selection ID
@@ -226,7 +228,6 @@ public class InventoryController implements Initializable {
             // The output format is
             // ID: {Name: *name*; Stock: *stock*}
             if(!idTrack.contains(i)){
-                System.out.println(i);
                 idTrack.add(i);
             }
             TreeItem<Stock> itemAdder = new TreeItem<>(new Stock(i, (String) temp.get("Name"), temp.get("Stock").toString()));
