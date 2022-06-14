@@ -1,5 +1,6 @@
 package AdminView;
 import Tools.Navigate;
+import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -48,4 +49,5 @@ public class AdminViewController implements Initializable {
         welcome.setText("Hi Administrator " + stage.getUserData()+ "!\n" +
                 "What is our Agenda today?");
     }
+
 }
