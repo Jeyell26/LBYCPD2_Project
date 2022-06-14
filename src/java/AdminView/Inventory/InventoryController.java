@@ -193,8 +193,13 @@ public class InventoryController implements Initializable {
                     currentEditing.getValue().save(cr);
                 }
                 else{
-                    System.out.println("ERROR: ");
+                    try {
+                        initTableView();
+                    } catch (ExecutionException | InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
+
             }
 
         });

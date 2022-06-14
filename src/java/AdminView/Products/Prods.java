@@ -8,22 +8,25 @@ import java.util.Map;
 public class Prods {
     private Integer id;
     private String name;
-    private Object stock;
+    private String ing;
+    private String stock;
 
 
-    public Prods(Integer id, String pN, Object st){
+    public Prods(Integer id, String pN, String st){
         this.id = id;
         name = pN;
         this.stock = st;
+        this.ing = null;
     }
 
-    public Prods(String pN, Object st){
-        name = pN;
+    public Prods(String pN, String st){
+        ing = pN;
         this.stock = st;
+        this.name = null;
     }
 
-    public Prods(String pN){
-        this.name = pN;
+    public Prods(){
+        this.name = null;
         this.stock = null;
     }
 
@@ -33,14 +36,31 @@ public class Prods {
     public String getName(){
         return name;
     }
+    public String getIng() {return ing;}
     public Object getStock(){
         return stock;
     }
-    public void save(CollectionReference cr){
+    public void setProd(Object prod){
+        this.name = (String) prod;
+    }
+    public void setStock(String stock){
+        this.stock = stock;
+    }
+    public void setIng(String pN) {this.ing = pN;}
+
+    public void save(CollectionReference cr, Object Ing){
         Map<String, Object> temp = new HashMap<>();
         temp.put("Name",name);
-        temp.put("Stock",Double.parseDouble((((String)stock).split("P"))[0]));
-        temp.put("Ingredients", null);
+        temp.put("Stock",Double.parseDouble(((stock.toString()).split(" "))[0]));
+        temp.put("Ingredients", Ing);
         cr.document(id.toString()).set(temp);
+    }
+
+    public void save(CollectionReference cr, Prods given, Object Ing){
+        Map<String, Object> temp = new HashMap<>();
+        temp.put("Name",given.getName());
+        temp.put("Stock",Double.parseDouble(((given.getStock().toString()).split(" "))[0]));
+        temp.put("Ingredients", Ing);
+        cr.document(given.getId().toString()).set(temp);
     }
 }

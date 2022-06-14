@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.control.TreeTableView?>
@@ -16,17 +17,23 @@
          </font>
       </Text>
       <Button fx:id="back" layoutX="67.0" layoutY="640.0" mnemonicParsing="false" text="Back" />
-      <TreeTableView fx:id="mainView" layoutX="67.0" layoutY="126.0" prefHeight="437.0" prefWidth="565.0">
+      <TreeTableView fx:id="mainView" editable="true" layoutX="67.0" layoutY="126.0" prefHeight="437.0" prefWidth="565.0" sortMode="ONLY_FIRST_LEVEL">
         <columns>
-            <TreeTableColumn fx:id="idCol" prefWidth="53.0" text="ID" />
-          <TreeTableColumn fx:id="prodCol" prefWidth="327.0" text="Product" />
-          <TreeTableColumn fx:id="stockCol" minWidth="0.0" prefWidth="184.0" text="Stock Required/Price" />
+            <TreeTableColumn fx:id="idCol" prefWidth="145.0" text="ID" />
+            <TreeTableColumn prefWidth="366.0" text="Product Details">
+               <columns>
+                <TreeTableColumn fx:id="prodCol" prefWidth="149.0" text="Product" />
+                  <TreeTableColumn fx:id="ingCol" prefWidth="121.0" text="Ingredients" />
+               </columns>
+            </TreeTableColumn>
+          <TreeTableColumn fx:id="stockCol" minWidth="0.0" prefWidth="149.0" text="Stock Required/Price" />
         </columns>
       </TreeTableView>
-      <Button fx:id="addIng" layoutX="524.0" layoutY="591.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Add Ingredient" />
-      <Button fx:id="del" layoutX="524.0" layoutY="627.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Delete" />
-      <Button fx:id="addProd" layoutX="404.0" layoutY="627.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Add Product" />
+      <Button fx:id="addIng" layoutX="239.0" layoutY="627.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Add Ingredient" />
+      <Button fx:id="del" layoutX="527.0" layoutY="591.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Delete" />
+      <Button fx:id="addProd" layoutX="404.0" layoutY="628.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Add Product" />
       <TextField fx:id="searchTF" layoutX="67.0" layoutY="77.0" prefHeight="25.0" prefWidth="334.0" promptText="Search Here!" />
       <TextField fx:id="prodTF" layoutX="360.0" layoutY="591.0" promptText="Input Product Name Here" />
+      <ComboBox fx:id="ingBox" layoutX="191.0" layoutY="591.0" prefWidth="150.0" promptText="Select Ingredient Here" />
    </children>
 </AnchorPane>
