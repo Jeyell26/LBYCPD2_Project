@@ -42,12 +42,12 @@
           <TreeTableColumn fx:id="stockCol" minWidth="0.0" prefWidth="149.0" text="Stock Required/Price" />
         </columns>
       </TreeTableView>
-      <Button fx:id="addIng" layoutX="187.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="99.0" styleClass="opacity" text="Add Ingredient" textFill="WHITE" />
+      <Button fx:id="addIng" layoutX="268.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="99.0" styleClass="opacity" text="Add Ingredient" textFill="WHITE" />
       <Button fx:id="del" layoutX="373.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" styleClass="opacity" text="Delete" textFill="WHITE" />
-      <Button fx:id="addProd" layoutX="288.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" styleClass="opacity" text="Add Product" textFill="WHITE" />
+      <Button fx:id="addProd" layoutX="177.0" layoutY="113.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" styleClass="opacity" text="Add Product" textFill="WHITE" />
       <TextField fx:id="searchTF" layoutX="522.0" layoutY="72.0" prefHeight="26.0" prefWidth="159.0" promptText="Search Here!" style="-fx-background-color: f4f4f9;" AnchorPane.rightAnchor="10.0" />
-      <TextField fx:id="prodTF" layoutX="8.0" layoutY="71.0" prefHeight="26.0" prefWidth="174.0" promptText="Input Product Name Here" style="-fx-background-color: f4f4f9;" AnchorPane.leftAnchor="10.0" />
-      <ComboBox fx:id="ingBox" layoutX="14.0" layoutY="113.0" prefHeight="26.0" prefWidth="418.0" promptText="Select Ingredient Here" style="-fx-background-color: f4f4f9;" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="prodTF" layoutX="477.0" layoutY="113.0" prefHeight="26.0" prefWidth="417.0" promptText="Input Product Name Here" style="-fx-background-color: f4f4f9;" AnchorPane.rightAnchor="10.0" />
+      <ComboBox fx:id="ingBox" layoutX="9.600000000000023" layoutY="71.0" prefHeight="26.0" prefWidth="251.0" promptText="Select Ingredient Here" style="-fx-background-color: f4f4f9;" AnchorPane.leftAnchor="10.0" />
       <ImageView fitHeight="50.0" fitWidth="75.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="6.0">
          <image>
             <Image url="@CCLogo.png" />

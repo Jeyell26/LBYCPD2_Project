@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane stylesheets="@/AdminView/AdminViewStyleSheet.css" prefHeight="717.0" prefWidth="696.0" style="-fx-background-color: EDE7e3;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminView.Inventory.InventoryController">
+<AnchorPane prefHeight="717.0" prefWidth="696.0" style="-fx-background-color: EDE7e3;" stylesheets="@/AdminView/AdminViewStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminView.Inventory.InventoryController">
    <children>
       <Rectangle arcWidth="5.0" fill="#ff9b00" height="63.0" layoutY="40.0" stroke="#ff9b00" strokeType="INSIDE" width="696.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Rectangle arcWidth="5.0" fill="#f38701" height="68.0" stroke="#f38701" strokeType="INSIDE" width="696.0" />
@@ -25,7 +25,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Text>
-      <Button fx:id="back" layoutX="618.0" layoutY="18.0" mnemonicParsing="false" opacity="0.4" prefHeight="68.0" prefWidth="99.0" style="-fx-background-color: ff9b00;" styleClass="opacity" text="Back" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="back" layoutX="618.0" layoutY="18.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="99.0" styleClass="opacity" text="Back" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <TreeTableView fx:id="mainTree" editable="true" layoutX="54.0" layoutY="130.0" prefHeight="574.0" prefWidth="676.0" style="-fx-background-color: f4f4f9;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <columns>
           <TreeTableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
@@ -34,11 +34,11 @@
             <TreeTableColumn fx:id="conCol" prefWidth="99.0" text="Confirm" />
         </columns>
       </TreeTableView>
-      <Button fx:id="add" layoutX="264.0" layoutY="72.0" mnemonicParsing="false" opacity="0.6" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: f38701;" styleClass="opacity" text="Add" textFill="WHITE">
+      <Button fx:id="add" layoutX="264.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="opacity" text="Add" textFill="WHITE">
          <font>
             <Font name="Arial" size="12.0" />
          </font></Button>
-      <Button fx:id="del" layoutX="348.0" layoutY="72.0" mnemonicParsing="false" opacity="0.6" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: f38701;" styleClass="opacity" text="Delete" textFill="WHITE">
+      <Button fx:id="del" layoutX="348.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="opacity" text="Delete" textFill="WHITE">
          <font>
             <Font name="Arial" size="12.0" />
          </font></Button>
