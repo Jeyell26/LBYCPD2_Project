@@ -1,6 +1,9 @@
 .btn{
     -fx-background-color: #f38701;
 }
+.opacity{
+    -fx-background-color: #f38701;
+}
 .btn:hover {
     -fx-pref-width: 220;
     -fx-background-color: #ff9b00;
@@ -8,4 +11,7 @@
 
 .opacity:hover{
     -fx-opacity: 1;
+    -fx-background-color: FCCE8E;
+    -fx-text-fill: #4e0707;
+
 }

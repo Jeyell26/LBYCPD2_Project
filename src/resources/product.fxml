@@ -26,7 +26,10 @@
             <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Button fx:id="back" layoutX="631.0" layoutY="12.0" mnemonicParsing="false" opacity="0.4" prefHeight="68.0" prefWidth="99.0" style="-fx-background-color: ff9b00;" styleClass="opacity" text="Back" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="back" layoutX="631.0" layoutY="12.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="99.0" styleClass="opacity" text="Back" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Button>
       <TreeTableView fx:id="mainView" editable="true" layoutX="10.0" layoutY="150.0" prefHeight="526.0" prefWidth="676.0" sortMode="ONLY_FIRST_LEVEL" style="-fx-background-color: f4f4f9;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <columns>
             <TreeTableColumn fx:id="idCol" prefWidth="145.0" text="ID" />
@@ -39,9 +42,9 @@
           <TreeTableColumn fx:id="stockCol" minWidth="0.0" prefWidth="149.0" text="Stock Required/Price" />
         </columns>
       </TreeTableView>
-      <Button fx:id="addIng" layoutX="187.0" layoutY="71.0" mnemonicParsing="false" opacity="0.6" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: f38701;" styleClass="opacity" text="Add Ingredient" textFill="WHITE" />
-      <Button fx:id="del" layoutX="373.0" layoutY="71.0" mnemonicParsing="false" opacity="0.6" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: f38701;" styleClass="opacity" text="Delete" textFill="WHITE" />
-      <Button fx:id="addProd" layoutX="288.0" layoutY="71.0" mnemonicParsing="false" opacity="0.6" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: f38701;" styleClass="opacity" text="Add Product" textFill="WHITE" />
+      <Button fx:id="addIng" layoutX="187.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="99.0" styleClass="opacity" text="Add Ingredient" textFill="WHITE" />
+      <Button fx:id="del" layoutX="373.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" styleClass="opacity" text="Delete" textFill="WHITE" />
+      <Button fx:id="addProd" layoutX="288.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" styleClass="opacity" text="Add Product" textFill="WHITE" />
       <TextField fx:id="searchTF" layoutX="522.0" layoutY="72.0" prefHeight="26.0" prefWidth="159.0" promptText="Search Here!" style="-fx-background-color: f4f4f9;" AnchorPane.rightAnchor="10.0" />
       <TextField fx:id="prodTF" layoutX="8.0" layoutY="71.0" prefHeight="26.0" prefWidth="174.0" promptText="Input Product Name Here" style="-fx-background-color: f4f4f9;" AnchorPane.leftAnchor="10.0" />
       <ComboBox fx:id="ingBox" layoutX="14.0" layoutY="113.0" prefHeight="26.0" prefWidth="418.0" promptText="Select Ingredient Here" style="-fx-background-color: f4f4f9;" AnchorPane.rightAnchor="10.0" />
