@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="691.0" prefWidth="696.0" stylesheets="@/AdminView/AdminViewStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminView.Products.ProductController">
+<AnchorPane prefHeight="691.0" prefWidth="696.0" style="-fx-background-color: EDE7e3;" stylesheets="@/AdminView/AdminViewStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminView.Products.ProductController">
    <children>
-      <Rectangle arcWidth="5.0" fill="#ff9b00" height="63.0" layoutX="-7.0" layoutY="77.0" stroke="#f38701" strokeType="INSIDE" width="696.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
-      <Rectangle arcWidth="5.0" fill="#f38701" height="63.0" layoutX="-3.0" stroke="#f38701" strokeType="INSIDE" width="696.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Text layoutX="419.0" layoutY="90.0" opacity="0.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" textAlignment="CENTER" wrappingWidth="138.13671875">
+      <Rectangle arcWidth="5.0" fill="#ff9b00" height="63.0" layoutY="77.0" stroke="#f38701" strokeType="INSIDE" width="696.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+      <Rectangle arcWidth="5.0" fill="#f38701" height="68.0" stroke="#f38701" strokeType="INSIDE" width="696.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Circle fill="#ede7e3" layoutX="131.0" layoutY="85.0" radius="30.0" stroke="#4e0707" strokeType="INSIDE" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="4.0" />
+      <Text layoutX="426.0" layoutY="90.0" opacity="0.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" textAlignment="CENTER" wrappingWidth="138.13671875">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Text>
-      <Text fill="#ede7e3" layoutX="418.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" textAlignment="CENTER" wrappingWidth="138.13671875">
+      <Text fill="#ede7e3" layoutX="425.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" textAlignment="CENTER" wrappingWidth="138.13671875">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Text>
-      <Text layoutX="131.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Inventory" textAlignment="CENTER" wrappingWidth="242.13671875" AnchorPane.topAnchor="20.0">
+      <Text fill="WHITE" layoutX="84.0" layoutY="45.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Inventory" wrappingWidth="242.13671875" AnchorPane.topAnchor="23.2734375">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logo" textAlignment="CENTER" wrappingWidth="117.13671112060547" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Text>
-      <Button fx:id="back" layoutX="631.0" layoutY="12.0" mnemonicParsing="false" opacity="0.8" prefHeight="63.0" prefWidth="75.0" style="-fx-background-color: dd7900;" styleClass="opacity" text="Back" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <TreeTableView fx:id="mainView" editable="true" layoutX="10.0" layoutY="150.0" prefHeight="526.0" prefWidth="676.0" sortMode="ONLY_FIRST_LEVEL" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <Button fx:id="back" layoutX="631.0" layoutY="12.0" mnemonicParsing="false" opacity="0.4" prefHeight="68.0" prefWidth="99.0" style="-fx-background-color: ff9b00;" styleClass="opacity" text="Back" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <TreeTableView fx:id="mainView" editable="true" layoutX="10.0" layoutY="150.0" prefHeight="526.0" prefWidth="676.0" sortMode="ONLY_FIRST_LEVEL" style="-fx-background-color: f4f4f9;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <columns>
             <TreeTableColumn fx:id="idCol" prefWidth="145.0" text="ID" />
             <TreeTableColumn prefWidth="366.0" text="Product Details">
@@ -45,8 +42,12 @@
       <Button fx:id="addIng" layoutX="187.0" layoutY="71.0" mnemonicParsing="false" opacity="0.6" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: f38701;" styleClass="opacity" text="Add Ingredient" textFill="WHITE" />
       <Button fx:id="del" layoutX="373.0" layoutY="71.0" mnemonicParsing="false" opacity="0.6" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: f38701;" styleClass="opacity" text="Delete" textFill="WHITE" />
       <Button fx:id="addProd" layoutX="288.0" layoutY="71.0" mnemonicParsing="false" opacity="0.6" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: f38701;" styleClass="opacity" text="Add Product" textFill="WHITE" />
-      <TextField fx:id="searchTF" layoutX="522.0" layoutY="72.0" prefHeight="26.0" prefWidth="159.0" promptText="Search Here!" />
-      <TextField fx:id="prodTF" layoutX="8.0" layoutY="71.0" prefHeight="26.0" prefWidth="174.0" promptText="Input Product Name Here" AnchorPane.leftAnchor="10.0" />
-      <ComboBox fx:id="ingBox" layoutX="14.0" layoutY="113.0" prefHeight="26.0" prefWidth="418.0" promptText="Select Ingredient Here" AnchorPane.rightAnchor="0.0" />
+      <TextField fx:id="searchTF" layoutX="522.0" layoutY="72.0" prefHeight="26.0" prefWidth="159.0" promptText="Search Here!" style="-fx-background-color: f4f4f9;" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="prodTF" layoutX="8.0" layoutY="71.0" prefHeight="26.0" prefWidth="174.0" promptText="Input Product Name Here" style="-fx-background-color: f4f4f9;" AnchorPane.leftAnchor="10.0" />
+      <ComboBox fx:id="ingBox" layoutX="14.0" layoutY="113.0" prefHeight="26.0" prefWidth="418.0" promptText="Select Ingredient Here" style="-fx-background-color: f4f4f9;" AnchorPane.rightAnchor="10.0" />
+      <ImageView fitHeight="50.0" fitWidth="75.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="6.0">
+         <image>
+            <Image url="@CCLogo.png" />
+         </image></ImageView>
    </children>
 </AnchorPane>

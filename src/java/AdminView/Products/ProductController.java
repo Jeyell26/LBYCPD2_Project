@@ -1,6 +1,7 @@
 package AdminView.Products;
 
 import AdminView.Inventory.Stock;
+import Tools.Navigate;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.CollectionReference;
 import com.google.cloud.firestore.DocumentReference;
@@ -64,6 +65,8 @@ public class ProductController implements Initializable {
 
     @FXML
     private ComboBox<String> ingBox;
+
+    Navigate x = new Navigate();
 
     // Database
     Firestore db = FirestoreClient.getFirestore();
@@ -137,6 +140,8 @@ public class ProductController implements Initializable {
                 hidden = filter;
             };
         });
+
+        back.setOnAction(e -> x.switchScene(e,"Administrator","Administrator"));
     }
 
 

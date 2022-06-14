@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@/AdminView/AdminViewStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminView.AdminViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: EDE7e3;" stylesheets="@/AdminView/AdminViewStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminView.AdminViewController">
    <children>
-      <Rectangle arcWidth="5.0" fill="#f38701" height="40.0" smooth="false" stroke="#f38701" strokeType="INSIDE" width="600.0" />
-      <Text fontSmoothingType="LCD" layoutX="105.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN VIEW">
+      <Rectangle arcWidth="5.0" fill="#f38701" height="400.0" smooth="false" stroke="#f38701" strokeType="INSIDE" width="200.0" />
+      <Text fill="#f4f4f9" fontSmoothingType="LCD" layoutX="27.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN VIEW">
          <font>
-            <Font size="10.0" />
+            <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Label fx:id="welcome" alignment="CENTER" layoutX="160.0" layoutY="118.0" prefHeight="40.0" prefWidth="280.0" text="Label" textAlignment="JUSTIFY" wrapText="true" />
-      <Button fx:id="inventory" layoutX="78.0" layoutY="208.0" mnemonicParsing="false" prefHeight="143.0" prefWidth="147.0" style="-fx-background-color: #3eb489;" styleClass="btn" text="Inventory" textFill="#f4f4f9" AnchorPane.bottomAnchor="48.80000000000001">
+      <Label fx:id="welcome" alignment="CENTER" layoutY="72.0" prefHeight="40.0" prefWidth="200.0" text="Label" textAlignment="CENTER" textFill="#f4f4f9" wrapText="true" />
+      <Button fx:id="inventory" layoutY="126.99999999999999" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Inventory" textFill="#f4f4f9" AnchorPane.bottomAnchor="225.8">
          <font>
-            <Font name="Roboto Light" size="13.0" />
+            <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="product" layoutX="226.0" layoutY="208.0" mnemonicParsing="false" prefHeight="143.0" prefWidth="147.0" style="-fx-background-color: #3eb489;" styleClass="btn" text="Product" textFill="#f4f4f9" AnchorPane.bottomAnchor="48.80000000000001">
+      <Button fx:id="product" layoutY="181.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Product" textFill="#f4f4f9" AnchorPane.bottomAnchor="171.8">
          <font>
-            <Font name="Roboto Light" size="13.0" />
+            <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="adminTools" layoutX="374.0" layoutY="208.0" mnemonicParsing="false" prefHeight="143.0" prefWidth="147.0" style="-fx-background-color: #3eb489;" styleClass="btn" text="Admin Tools" textFill="#f4f4f9" AnchorPane.bottomAnchor="48.80000000000001">
+      <Button fx:id="adminTools" layoutY="236.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Admin Tools" textFill="#f4f4f9" AnchorPane.bottomAnchor="116.80000000000001">
          <font>
-            <Font name="Roboto Light" size="13.0" />
+            <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Logo Here">
+      <Button fx:id="Back" layoutY="291.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Back" textFill="#f4f4f9">
          <font>
-            <Font size="10.0" />
-         </font>
-      </Text>
-      <Button fx:id="Back" layoutX="504.0" layoutY="4.0" mnemonicParsing="false" opacity="0.8" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #3eb489;" styleClass="opacity" text="Back" textFill="#f4f4f9">
-         <font>
-            <Font name="Roboto Light" size="13.0" />
+            <Font name="Arial" size="18.0" />
          </font>
       </Button>
+      <ImageView fitHeight="270.0" fitWidth="274.0" layoutX="259.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/CCLogo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
