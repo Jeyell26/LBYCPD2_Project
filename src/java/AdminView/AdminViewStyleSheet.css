@@ -1,0 +1,8 @@
+.btn:hover {
+    -fx-pref-height: 160;
+    -fx-opacity: 1;
+}
+
+.exit:hover{
+    -fx-opacity: 1;
+}

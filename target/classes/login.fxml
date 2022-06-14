@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuFX.LoginFX.LoginController">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuFX.LoginFX.LoginController">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -20,37 +14,64 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3eb489;">
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: EDE7e3;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3da35d" height="344.0" layoutX="148.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="312.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f9" height="344.0" layoutX="144.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="312.0" />
-            <TextField fx:id="user" layoutX="182.0" layoutY="137.0" prefHeight="42.0" prefWidth="234.0" promptText="Username" />
-            <PasswordField fx:id="pass" layoutX="182.0" layoutY="194.0" prefHeight="42.0" prefWidth="234.0" promptText="Password" />
-            <TextField fx:id="showPass" layoutX="182.0" layoutY="194.0" prefHeight="42.0" prefWidth="234.0" promptText="Password" />
-            <Button fx:id="login" layoutX="183.0" layoutY="277.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="233.0" style="-fx-background-color: #3eb489;" text="LOGIN" textFill="WHITE">
+            <Polygon fill="#f38701" layoutX="0.0" layoutY="0.0" stroke="#ff9b00" strokeType="INSIDE">
+              <points>
+                <Double fx:value="300.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="600.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="600.0" />
+                <Double fx:value="400.0" />
+                <Double fx:value="200.0" />
+                <Double fx:value="400.0" />
+              </points>
+            </Polygon>
+            <TextField fx:id="user" layoutX="312.0" layoutY="133.0" prefHeight="30.0" prefWidth="234.0" promptText="Enter your username">
                <font>
-                  <Font name="Rockwell" size="14.0" />
-               </font></Button>
-            <Button fx:id="back" layoutX="183.0" layoutY="317.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="234.0" style="-fx-background-color: #3eb489;" text="MAIN MENU" textFill="WHITE">
+                  <Font size="9.0" />
+               </font></TextField>
+            <PasswordField fx:id="pass" layoutX="311.0" layoutY="185.0" prefHeight="30.0" prefWidth="234.0" promptText="Password">
                <font>
-                  <Font name="Rockwell" size="14.0" />
+                  <Font size="9.0" />
+               </font></PasswordField>
+            <TextField fx:id="showPass" layoutX="311.0" layoutY="185.0" prefHeight="30.0" prefWidth="234.0" promptText="Enter your password">
+               <font>
+                  <Font size="9.0" />
+               </font></TextField>
+            <Button fx:id="login" layoutX="312.0" layoutY="258.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="233.0" style="-fx-background-color: f7a400;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="Arial Narrow" size="14.0" />
                </font></Button>
-            <Label layoutX="182.0" layoutY="36.0" text="LOGIN">
+            <Button fx:id="back" layoutX="311.0" layoutY="300.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="234.0" style="-fx-background-color: f7a400;" text="EXIT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Narrow" size="14.0" />
+               </font></Button>
+            <Label layoutX="40.0" layoutY="186.0" text="Input Logo Here">
                <font>
                   <Font name="Calibri Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="183.0" layoutY="64.0" opacity="0.27" text="Welcome to our LBYCPD2">
+            <Label layoutX="312.0" layoutY="119.0" text="USERNAME" textFill="#f4f4f9">
                <font>
                   <Font name="Calibri" size="10.0" />
                </font>
             </Label>
-            <Label fx:id="error" layoutX="182.0" layoutY="86.0" prefHeight="42.0" prefWidth="234.0">
+            <Label fx:id="error" layoutX="312.0" layoutY="83.0" prefHeight="42.0" prefWidth="234.0" textFill="#f4f4f9">
                <font>
                   <Font name="Calibri Bold" size="12.0" />
                </font>
             </Label>
-            <CheckBox fx:id="showToggle" layoutX="182.0" layoutY="247.0" mnemonicParsing="false" text="Show Password" />
+            <CheckBox fx:id="showToggle" layoutX="312.0" layoutY="225.0" mnemonicParsing="false" text="Show Password" textFill="#f4f4f9">
+               <font>
+                  <Font size="9.0" />
+               </font></CheckBox>
+            <Label layoutX="312.0" layoutY="170.0" text="PASSWORD" textFill="#f4f4f9">
+               <font>
+                  <Font name="Calibri" size="10.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
    </children>
 </GridPane>
