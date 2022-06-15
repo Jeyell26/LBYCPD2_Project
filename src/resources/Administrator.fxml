@@ -30,7 +30,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="Back" layoutY="291.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Back" textFill="#f4f4f9">
+      <Button fx:id="Back" layoutY="291.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Logout" textFill="#f4f4f9">
          <font>
             <Font name="Arial" size="18.0" />
          </font>

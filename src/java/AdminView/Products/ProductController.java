@@ -116,7 +116,7 @@ public class ProductController implements Initializable {
                     }
                     // The output format is
                     // ID: {Name: *name*; Stock: *price*; Ing: HashMap<Ing, Stock>}
-                    TreeItem<Prods> itemAdder = new TreeItem<>(new Prods(i, (String) temp.get("Name"), temp.get("Stock").toString() + " P"));
+                    TreeItem<Prods> itemAdder = new TreeItem<>(new Prods(i, (String) temp.get("Name"), temp.get("Stock").toString() + " Php"));
                     if(((String) temp.get("Name")).toLowerCase().contains(searchTF.getText().toLowerCase())){
                         flag = true;
                     }
@@ -205,7 +205,7 @@ public class ProductController implements Initializable {
                 id++;
             }
             idTrack.add(id);
-            Prods newProd = new Prods(id,prodTF.getText(),0 + " P");
+            Prods newProd = new Prods(id,prodTF.getText(),0 + " Php");
             TreeItem<Prods> itemAdder = new TreeItem<>(newProd);
             hidden.getChildren().add(itemAdder);
             prodTF.clear();
