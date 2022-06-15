@@ -169,7 +169,7 @@ public class ProductController implements Initializable {
     }
 
     public void addIngredient(){
-        if(ingBox.getValue() != null){
+        if(ingBox.getValue() != null && selectedItem.getParent() == hidden){
             TreeItem<Prods> newIng = new TreeItem<>(new Prods(ingBox.getValue(),"0 items"));
             selectedItem.getChildren().add(newIng);
             Map<String, Double> ingStore = new HashMap<>();
@@ -267,18 +267,16 @@ public class ProductController implements Initializable {
                     currentEditing.getValue().setProd(event.getNewValue());
                     Map<String, Double> ingStore = new HashMap<>();
                     for(TreeItem<Prods> element:currentEditing.getChildren()){
-                        ingStore.put(element.getValue().getName(), Double.parseDouble(((String) element.getValue().getStock()).split(" ")[0]));
+                        ingStore.put(element.getValue().getIng(), Double.parseDouble(((String) element.getValue().getStock()).split(" ")[0]));
                     }
                     currentEditing.getValue().save(cr,ingStore);
                 }
                 else{
-                    currentEditing.getValue().setProd(event.getNewValue());
-                    Map<String, Double> ingStore = new HashMap<>();
-                    for(TreeItem<Prods> element:currentEditing.getParent().getChildren()){
-                        ingStore.put(element.getValue().getName(), Double.parseDouble(((String) element.getValue().getStock()).split(" ")[0]));
+                    try {
+                        initTableView();
+                    } catch (ExecutionException | InterruptedException e) {
+                        e.printStackTrace();
                     }
-
-                    currentEditing.getValue().save(cr,currentEditing.getParent().getValue(),ingStore);
                 }
             }
         });
@@ -295,7 +293,7 @@ public class ProductController implements Initializable {
                         currentEditing.getValue().setStock(String.valueOf(Double.valueOf(event.getNewValue()))+ " P");
                         Map<String, Double> ingStore = new HashMap<>();
                         for(TreeItem<Prods> element:currentEditing.getChildren()){
-                            ingStore.put(element.getValue().getName(), Double.parseDouble(((String) element.getValue().getStock()).split(" ")[0]));
+                            ingStore.put(element.getValue().getIng(), Double.parseDouble(((String) element.getValue().getStock()).split(" ")[0]));
                         }
                         currentEditing.getValue().save(cr,ingStore);
                     }

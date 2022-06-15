@@ -36,9 +36,6 @@ public class InventoryController implements Initializable {
     private TreeTableColumn<Stock, String> stockCol;
 
     @FXML
-    private TreeTableColumn<Stock, Object> conCol;
-
-    @FXML
     private Button add;
 
     @FXML
@@ -167,6 +164,7 @@ public class InventoryController implements Initializable {
         }
         return true;
     }
+
     // Allow editing of cells
     public void editableCells(){
         // Making Editable
@@ -210,8 +208,7 @@ public class InventoryController implements Initializable {
 
 
         // Col settings.
-        conCol.setSortable(false);
-        conCol.setReorderable(false);
+
         idCol.setReorderable(false);
         nameCol.setReorderable(false);
         stockCol.setReorderable(false);

@@ -62,5 +62,6 @@ public class Prods {
         temp.put("Stock",Double.parseDouble(((given.getStock().toString()).split(" "))[0]));
         temp.put("Ingredients", Ing);
         cr.document(given.getId().toString()).set(temp);
+        // cr.document("0").set("Name": *string, "Stock": Double")
     }
 }

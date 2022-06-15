@@ -7,12 +7,14 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class AdminTools extends Application {
+    Firebase.FirebaseService firebase = new Firebase.FirebaseService();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/src/Archive/main.fxml"));
+        firebase.initialize();
+        Parent root = FXMLLoader.load(getClass().getResource("/AdminTools.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
