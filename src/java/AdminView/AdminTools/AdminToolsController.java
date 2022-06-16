@@ -1,5 +1,8 @@
 package AdminView.AdminTools;
 
+import AdminView.Inventory.Stock;
+import AdminView.Products.Prods;
+import Tools.Navigate;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.CollectionReference;
 import com.google.cloud.firestore.DocumentReference;
@@ -7,6 +10,8 @@ import com.google.cloud.firestore.DocumentSnapshot;
 import com.google.cloud.firestore.Firestore;
 import com.google.firebase.cloud.FirestoreClient;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -53,6 +58,8 @@ public class AdminToolsController implements Initializable {
     private TextField searchTF;
 
     TreeItem<Users> hidden;
+    TreeItem<Users> selectedItem;
+    Navigate x = new Navigate();
 
     // Database
     Firestore db = FirestoreClient.getFirestore();
@@ -69,6 +76,72 @@ public class AdminToolsController implements Initializable {
             e.printStackTrace();
         }
         editableCells();
+        add.setOnAction(e -> addUser());
+        mainView.setOnMouseClicked(e -> highlight());
+        del.setOnAction(e -> delete());
+        del.setDisable(true);
+        back.setOnAction(e -> x.switchScene(e,"Administrator","Administrator"));
+
+
+        searchTF.textProperty().addListener(new ChangeListener<String>(){
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                TreeItem<Users> filter = new TreeItem<>();
+                // item loader
+                Map<String,Map<String, String>> items = null;
+                try {
+                    items = loadItems();
+                } catch (ExecutionException | InterruptedException e) {
+                    e.printStackTrace();
+                }
+                for(String i: items.keySet()){
+                    Map <String, String> temp = items.get(i);
+                    // The output format is
+                    // ID: {Name: *name*; Stock: *stock*}
+                    String user = i;
+                    if ((user.toLowerCase().contains(searchTF.getText().toLowerCase()))){
+                        TreeItem<Users> itemAdder = new TreeItem<>(new Users(user,temp.get("Pass"),temp.get("Pass")));
+                        filter.getChildren().add(itemAdder);
+                    }
+                }
+                mainView.setRoot(filter);
+                if(searchTF.getText().isBlank()){
+                    try {
+                        initTableView();
+                    } catch (ExecutionException | InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+        });
+    }
+
+    public void delete(){
+        if(selectedItem != null){
+            cr.document(selectedItem.getValue().getUser()).delete();
+            hidden.getChildren().remove(selectedItem);
+        }
+    }
+
+    public void highlight(){
+        selectedItem = mainView.getSelectionModel().getSelectedItem();
+        if(selectedItem==null){
+            return;
+        }
+        del.setDisable(false);
+    }
+
+    public void addUser(){
+        if(!userTF.getText().isBlank()){
+            Users newUser = new Users(userTF.getText());
+            TreeItem<Users> itemAdder = new TreeItem<>(newUser);
+            hidden.getChildren().add(itemAdder);
+            userTF.clear();
+            newUser.save(cr);
+        }
+        else{
+            userTF.setPromptText("Insert User Here");
+        }
     }
 
     // Allow editing of cells
@@ -85,11 +158,6 @@ public class AdminToolsController implements Initializable {
                 TreeItem<Users> currentEditing = mainView.getTreeItem(event.getTreeTablePosition().getRow());
                 currentEditing.getValue().setUser(event.getNewValue());
                 currentEditing.getValue().save(cr);
-//                try {
-//                    initTableView();
-//                } catch (ExecutionException | InterruptedException e) {
-//                    e.printStackTrace();
-//                }
             }
         });
 
