@@ -1,53 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.control.TreeTableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="596.0" prefWidth="567.0" style="-fx-background-color: EDE7e3;" stylesheets="@/AdminView/AdminViewStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminView.AdminTools.AdminToolsController">
+<AnchorPane prefHeight="691.0" prefWidth="696.0" style="-fx-background-color: EDE7e3;" stylesheets="@/AdminView/AdminViewStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminView.AdminTools.AdminToolsController">
    <children>
-      <Rectangle arcWidth="5.0" fill="#f38701" height="145.0" smooth="false" stroke="#f38701" strokeType="INSIDE" width="743.0" />
-      <ImageView fitHeight="270.0" fitWidth="274.0" layoutX="259.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle arcWidth="5.0" fill="#ff9b00" height="68.0" layoutX="1.0" smooth="false" stroke="#ff9b00" strokeType="INSIDE" width="696.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+      <Rectangle arcWidth="5.0" fill="#f38701" height="68.0" layoutX="10.0" layoutY="10.0" smooth="false" stroke="#f38701" strokeType="INSIDE" width="696.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Circle fill="#ede7e3" radius="30.0" stroke="#4e0707" strokeType="INSIDE" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="4.0" />
+      <ImageView fitHeight="50.0" fitWidth="75.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="6.0">
          <image>
             <Image url="@/CCLogo.png" />
          </image>
       </ImageView>
-      <TreeTableView fx:id="mainView" editable="true" layoutX="27.0" layoutY="157.0" prefHeight="388.0" prefWidth="695.0">
+      <TreeTableView fx:id="mainView" editable="true" layoutX="10.0" layoutY="124.0" prefHeight="550.0" prefWidth="676.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <columns>
           <TreeTableColumn fx:id="userCol" prefWidth="233.0" text="Username" />
             <TreeTableColumn fx:id="passCol" minWidth="0.0" prefWidth="233.0" text="Password" />
             <TreeTableColumn fx:id="typeCol" minWidth="0.0" prefWidth="179.0" text="Type" />
         </columns>
       </TreeTableView>
-      <Text fill="WHITE" layoutX="94.0" layoutY="67.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Tools">
+      <Text fill="WHITE" layoutX="88.0" layoutY="42.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Tools" AnchorPane.topAnchor="23.2734375">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="479.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search">
+      <Text fill="WHITE" layoutX="471.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Text>
-      <Button fx:id="back" layoutX="623.0" layoutY="11.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="99.0" styleClass="opacity" text="Back" textFill="WHITE" />
-      <Button fx:id="add" layoutX="274.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="opacity" text="Add" textFill="WHITE">
+      <Button fx:id="back" layoutX="596.0" layoutY="11.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="99.0" styleClass="opacity" text="Back" textFill="WHITE" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="add" layoutX="261.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="opacity" text="Add" textFill="WHITE">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="del" layoutX="358.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="opacity" text="Delete" textFill="WHITE">
+      <Button fx:id="del" layoutX="348.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="opacity" text="Delete" textFill="WHITE">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="userTF" layoutX="28.0" layoutY="82.0" prefHeight="26.0" prefWidth="240.0" promptText="Insert Inventory Name Here" />
-      <TextField fx:id="searchTF" layoutX="531.8" layoutY="82.0" prefHeight="26.0" prefWidth="159.0" promptText="Search Here!" style="-fx-background-color: f4f4f9;" />
+      <TextField fx:id="userTF" layoutX="10.0" layoutY="74.0" prefHeight="26.0" prefWidth="240.0" promptText="Insert Inventory Name Here" AnchorPane.leftAnchor="10.0" />
+      <TextField fx:id="searchTF" layoutX="523.0" layoutY="74.0" prefHeight="26.0" prefWidth="159.0" promptText="Search Here!" style="-fx-background-color: f4f4f9;" />
    </children>
 </AnchorPane>
