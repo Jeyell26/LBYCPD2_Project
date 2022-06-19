@@ -26,6 +26,9 @@ public class AdminViewController implements Initializable {
     private Button adminTools;
 
     @FXML
+    private Button graphView;
+
+    @FXML
     private Button Back;
 
     Stage stage;
@@ -42,6 +45,7 @@ public class AdminViewController implements Initializable {
         Back.setOnAction(e -> x.switchScene(e,"login","Login Page"));
         inventory.setOnAction(e -> x.switchScene(e, "inventory", "Inventory Page"));
         product.setOnAction(e -> x.switchScene(e, "product", "Product Page"));
+        graphView.setOnAction(e -> x.switchScene(e, "graph", "Graph Page"));
     }
 
     public void setWelcome(){

@@ -15,22 +15,27 @@
          </font>
       </Text>
       <Label fx:id="welcome" alignment="CENTER" layoutY="72.0" prefHeight="40.0" prefWidth="200.0" text="Label" textAlignment="CENTER" textFill="#f4f4f9" wrapText="true" />
-      <Button fx:id="inventory" layoutY="126.99999999999999" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Inventory" textFill="#f4f4f9" AnchorPane.bottomAnchor="225.8">
+      <Button fx:id="inventory" layoutY="121.99999999999999" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Inventory" textFill="#f4f4f9" AnchorPane.bottomAnchor="230.8">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="product" layoutY="181.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Product" textFill="#f4f4f9" AnchorPane.bottomAnchor="171.8">
+      <Button fx:id="product" layoutY="170.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Product" textFill="#f4f4f9" AnchorPane.bottomAnchor="182.8">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="adminTools" layoutY="236.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Admin Tools" textFill="#f4f4f9" AnchorPane.bottomAnchor="116.80000000000001">
+      <Button fx:id="adminTools" layoutY="218.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Admin Tools" textFill="#f4f4f9" AnchorPane.bottomAnchor="134.8">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="Back" layoutY="291.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Logout" textFill="#f4f4f9">
+      <Button fx:id="graphView" layoutY="266.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Graph View" textFill="#f4f4f9">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="Back" layoutY="314.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="200.0" styleClass="btn" text="Logout" textFill="#f4f4f9">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
