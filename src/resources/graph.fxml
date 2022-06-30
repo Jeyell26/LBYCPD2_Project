@@ -92,7 +92,7 @@
             <Image url="@CCLogo.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="menuClose" fitHeight="50.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="6.0">
+      <ImageView fx:id="menuClose" fitHeight="50.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="6.0">
          <image>
             <Image url="@CCLogo.png" />
          </image>
