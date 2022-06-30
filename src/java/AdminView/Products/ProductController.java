@@ -230,8 +230,6 @@ public class ProductController implements Initializable {
     // Allow editing of cells
     public void editableCells() throws ExecutionException, InterruptedException {
         // Making Editable
-
-
         ObservableList<String> list = (ObservableList<String>) loadIng();
 
         ingCol.setEditable(true);

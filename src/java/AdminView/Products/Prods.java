@@ -48,6 +48,7 @@ public class Prods {
     }
     public void setIng(String pN) {this.ing = pN;}
 
+    // for changing ing
     public void save(CollectionReference cr, Object Ing){
         Map<String, Object> temp = new HashMap<>();
         temp.put("Name",name);
@@ -56,6 +57,7 @@ public class Prods {
         cr.document(id.toString()).set(temp);
     }
 
+    // for changing product name
     public void save(CollectionReference cr, Prods given, Object Ing){
         Map<String, Object> temp = new HashMap<>();
         temp.put("Name",given.getName());

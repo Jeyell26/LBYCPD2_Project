@@ -192,7 +192,7 @@ public class GraphController implements Initializable {
         genDates(totalDates);
 
         CategoryAxis xAxis = new CategoryAxis(FXCollections.observableArrayList(totalDates));
-        NumberAxis yAxis = new NumberAxis(-5,totSales.get(totSales.size()-1)+300,totSales.size());
+        NumberAxis yAxis = new NumberAxis(0,totSales.get(totSales.size()-1)+300,totSales.size());
         XYChart.Series series = new XYChart.Series();
         LineChart lineChart = new LineChart(xAxis, yAxis);
 
@@ -252,6 +252,7 @@ public class GraphController implements Initializable {
             }
 
             if(isPart){
+                // save all ing that have been used in that range
                 ingTracker.add(totIng);
             }
         }
@@ -441,7 +442,7 @@ public class GraphController implements Initializable {
             else{
                 min = ingTrack;
             }
-
+            // when prod and ing should be in the same row
             for(int i = 0; i<min;i++){
                 String ing = String.valueOf(totIng.get(ingList.get(i)));
                 String prod = String.valueOf(totOrdered.get(ordList.get(i)));
@@ -449,6 +450,7 @@ public class GraphController implements Initializable {
                 date.getChildren().add(temp);
             }
 
+            // if ing has more
             if (ingTrack>orderedTrack){
                 for(int i = min; i<ingTrack;i++){
                     String ing = String.valueOf(totIng.get(ingList.get(i)));
@@ -456,6 +458,7 @@ public class GraphController implements Initializable {
                     date.getChildren().add(temp);
                 }
             }
+            // if prod has more
             else{
                 for(int i = min; i<orderedTrack;i++){
                     String prod = String.valueOf(totOrdered.get(ordList.get(i)));
