@@ -6,8 +6,10 @@ import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
 import com.google.cloud.firestore.Firestore;
 import com.google.firebase.cloud.FirestoreClient;
+import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
@@ -15,7 +17,10 @@ import javafx.scene.Scene;
 import javafx.scene.chart.*;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.text.ParseException;
@@ -65,6 +70,12 @@ public class GraphController implements Initializable {
     private Button back;
 
     @FXML
+    private ImageView menu, menuClose;
+
+    @FXML
+    private VBox slider;
+
+    @FXML
     private ComboBox<String> optionBox;
 
     TreeItem<Dates> hidden;
@@ -98,6 +109,38 @@ public class GraphController implements Initializable {
 
         startDate.setValue(LocalDate.parse(sdf.format(dates.get(0))));
         endDate.setValue(LocalDate.parse(currTime));
+
+        slider.setTranslateX(-260);
+        menu.setOnMouseClicked(event -> {
+            TranslateTransition slide = new TranslateTransition();
+            slide.setDuration(Duration.seconds(0.4));
+            slide.setNode(slider);
+            slide.setToX(0);
+            slide.play();
+
+            slider.setTranslateX(-260);
+
+            slide.setOnFinished((ActionEvent e) -> {
+                menu.setVisible(false);
+                menuClose.setVisible(true);
+            });
+        });
+
+        menuClose.setOnMouseClicked(event -> {
+            TranslateTransition slide = new TranslateTransition();
+            slide.setDuration(Duration.seconds(0.4));
+            slide.setNode(slider);
+
+            slide.setToX(-260);
+            slide.play();
+
+            slider.setTranslateX(0);
+
+            slide.setOnFinished((ActionEvent e) -> {
+                menu.setVisible(true);
+                menuClose.setVisible(false);
+            });
+        });
     }
 
     public void genDates() {

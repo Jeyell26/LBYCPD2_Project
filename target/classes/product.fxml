@@ -31,16 +31,16 @@
             <Font name="Arial Bold" size="12.0" />
          </font></Button>
       <TreeTableView fx:id="mainView" editable="true" layoutX="10.0" layoutY="150.0" prefHeight="526.0" prefWidth="676.0" sortMode="ONLY_FIRST_LEVEL" style="-fx-background-color: f4f4f9;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
-        <columns>
+         <columns>
             <TreeTableColumn fx:id="idCol" prefWidth="145.0" text="ID" />
-            <TreeTableColumn prefWidth="366.0" text="Product Details">
+            <TreeTableColumn prefWidth="400.0" text="Product Details">
                <columns>
-                <TreeTableColumn fx:id="prodCol" prefWidth="149.0" text="Product" />
-                  <TreeTableColumn fx:id="ingCol" prefWidth="121.0" text="Ingredients" />
+                  <TreeTableColumn fx:id="prodCol" prefWidth="149.0" text="Product" />
+                  <TreeTableColumn fx:id="ingCol" prefWidth="121.60000610351562" text="Ingredients" />
                </columns>
             </TreeTableColumn>
-          <TreeTableColumn fx:id="stockCol" minWidth="0.0" prefWidth="149.0" text="Stock Required/Price" />
-        </columns>
+            <TreeTableColumn fx:id="stockCol" minWidth="0.0" prefWidth="257.3999938964844" text="Stock Required/Price" />
+         </columns>
       </TreeTableView>
       <Button fx:id="addIng" layoutX="268.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="99.0" styleClass="opacity" text="Add Ingredient" textFill="WHITE" />
       <Button fx:id="del" layoutX="373.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" styleClass="opacity" text="Delete" textFill="WHITE" />
