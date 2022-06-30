@@ -121,7 +121,7 @@ public class CashierViewController implements Initializable {
     public void transact() throws ExecutionException, InterruptedException {
         // if database on that date exists, update total price, update ingredients deducted
         // if not, create a new one. put the current total price, update ingredients deducted
-//        Date: to Price: **** : IngUsed: :::
+//        Date: totPrice: **** : IngUsed: : ****: ProdOrdered:*****
         LocalDate setDate = LocalDate.now();
         DocumentSnapshot currColl = null;
         try {
@@ -276,7 +276,6 @@ public class CashierViewController implements Initializable {
         del.setDisable(true);
         hidden.getChildren().remove(selectedItem);
         currCar.remove(selectedItem.getValue().getName());
-        System.out.println(currCar);
         updatePrice();
     }
 

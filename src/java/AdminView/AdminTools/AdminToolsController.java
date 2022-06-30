@@ -96,11 +96,9 @@ public class AdminToolsController implements Initializable {
                 }
                 for(String i: items.keySet()){
                     Map <String, String> temp = items.get(i);
-                    // The output format is
-                    // ID: {Name: *name*; Stock: *stock*}
                     String user = i;
                     if ((user.toLowerCase().contains(searchTF.getText().toLowerCase()))){
-                        TreeItem<Users> itemAdder = new TreeItem<>(new Users(user,temp.get("Pass"),temp.get("Pass")));
+                        TreeItem<Users> itemAdder = new TreeItem<>(new Users(user,temp.get("Pass"),temp.get("Type")));
                         filter.getChildren().add(itemAdder);
                     }
                 }
@@ -159,24 +157,6 @@ public class AdminToolsController implements Initializable {
                 currentEditing.getValue().setUser(event.getNewValue());
                 currentEditing.getValue().save(cr);
             }
-        });
-
-        passCol.setEditable(true);
-        passCol.setCellFactory(TextFieldTreeTableCell.<Users>forTreeTableColumn());
-        passCol.setOnEditCommit(new EventHandler<TreeTableColumn.CellEditEvent<Users, String>>() {
-
-            @Override
-            public void handle(TreeTableColumn.CellEditEvent<Users, String> event) {
-                TreeItem<Users> currentEditing = mainView.getTreeItem(event.getTreeTablePosition().getRow());
-                currentEditing.getValue().setPass(event.getNewValue());
-                currentEditing.getValue().save(cr);
-                try {
-                    initTableView();
-                } catch (ExecutionException | InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
         });
 
         passCol.setEditable(true);

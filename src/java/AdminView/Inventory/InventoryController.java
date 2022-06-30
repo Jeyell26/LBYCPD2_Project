@@ -66,16 +66,17 @@ public class InventoryController implements Initializable {
         //
 
         try {
+            // loads db and show in mainTree
             initTableView();
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }
+        // allow cells to be editable
         editableCells();
         add.setOnAction(e -> addNew());
         del.setOnAction(e -> delItem());
         del.setDisable(true);
         mainTree.setOnMouseClicked(e -> highlight());
-
 
         searchTF.textProperty().addListener(new ChangeListener<String>(){
             @Override
@@ -138,7 +139,6 @@ public class InventoryController implements Initializable {
     public void addNew(){
         if(!titleTF.getText().isBlank()){
             while(idTrack.contains(id)){
-
                 id++;
             }
             idTrack.add(id);
@@ -208,7 +208,6 @@ public class InventoryController implements Initializable {
 
 
         // Col settings.
-
         idCol.setReorderable(false);
         nameCol.setReorderable(false);
         stockCol.setReorderable(false);
@@ -217,6 +216,7 @@ public class InventoryController implements Initializable {
         hidden = new TreeItem();
 
         // Setting Col variables
+        // Setting up how the columns read the data
         idCol.setCellValueFactory(new TreeItemPropertyValueFactory<Stock, String>("id"));
         nameCol.setCellValueFactory(new TreeItemPropertyValueFactory<Stock, String>("name"));
         stockCol.setCellValueFactory(new TreeItemPropertyValueFactory<Stock, String>("stock"));

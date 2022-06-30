@@ -65,10 +65,13 @@ public class LoginController implements Initializable {
             boolean temp = false;
             stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
             try {
+                // Temp checks if user and password is valid
                 temp = loginUser(user.getText(),getPass());
             } catch (ExecutionException | InterruptedException ex) {
                 ex.printStackTrace();
             }
+
+            // Go to next window if temp is true
             if (temp){
                 try {
                     error.setText(getType(user.getText()) + " login! Welcome " + user.getText());
@@ -85,8 +88,6 @@ public class LoginController implements Initializable {
         });
 
         back.setOnAction(this::setBack);
-
-
     }
 
     private void togglePass(ActionEvent event){
@@ -114,8 +115,9 @@ public class LoginController implements Initializable {
     }
 
     private void setLogin(ActionEvent e, String input, String user) {
+        // Sample input
+        // e, Cashier(.fxml), Cashier Page, user
         x.switchScene(e,input,input + " Page", user);
-
     }
 
     // whether inputted user details matches
