@@ -9,6 +9,15 @@
 
 <AnchorPane prefHeight="671.0" prefWidth="1090.0" style="-fx-background-color: EDE7e3;" stylesheets="@/AdminView/AdminViewStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminView.GraphView.GraphController">
    <children>
+      <Label fx:id="clickLabel" layoutX="25.0" layoutY="347.0" opacity="0.6" prefHeight="18.0" prefWidth="118.0" text="Click to show graph ">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Label fx:id="menu" layoutX="120.0" layoutY="300.0" opacity="0.6" prefHeight="91.0" prefWidth="60.0" text="&gt;">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Label>
       <TreeTableView fx:id="mainView" layoutX="280.0" layoutY="86.0" prefHeight="524.0" prefWidth="782.0">
          <columns>
             <TreeTableColumn fx:id="dateCol" editable="false" prefWidth="134.0" text="Date" />
@@ -62,12 +71,24 @@
             </DatePicker>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date">
                <VBox.margin>
-                  <Insets bottom="200.0" left="35.0" />
+                  <Insets bottom="100.0" left="35.0" />
                </VBox.margin>
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
             </Text>
+            <Pane fx:id="menuClose" opacity="0.68" prefHeight="55.0" prefWidth="42.0" style="-fx-background-color: #f2f2f4;">
+               <VBox.margin>
+                  <Insets bottom="60.0" right="220.0" />
+               </VBox.margin>
+               <children>
+                  <Label layoutY="-23.0" prefWidth="44.0" text="&lt;">
+                     <font>
+                        <Font size="64.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
             <Button fx:id="show" disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="261.0" styleClass="btn" text="Show" textFill="WHITE">
                <VBox.margin>
                   <Insets bottom="15.0" />
@@ -87,15 +108,15 @@
       </VBox>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f38701" height="65.0" layoutX="60.0" layoutY="-72.0" stroke="#f38701" strokeType="INSIDE" width="1096.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Circle fill="#ede7e3" layoutX="131.0" layoutY="85.0" radius="30.0" stroke="#4e0707" strokeType="INSIDE" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="4.0" />
-      <ImageView fx:id="menu" fitHeight="50.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="6.0">
+      <ImageView fitHeight="50.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="6.0">
          <image>
             <Image url="@CCLogo.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="menuClose" fitHeight="50.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="6.0">
-         <image>
-            <Image url="@CCLogo.png" />
-         </image>
-      </ImageView>
+      <Label fx:id="menu1" layoutX="85.0" layoutY="11.0" prefHeight="42.0" prefWidth="130.0" text="Graph View" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

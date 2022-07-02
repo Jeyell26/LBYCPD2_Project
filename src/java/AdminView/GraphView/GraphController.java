@@ -18,6 +18,7 @@ import javafx.scene.chart.*;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -70,7 +71,10 @@ public class GraphController implements Initializable {
     private Button back;
 
     @FXML
-    private ImageView menu, menuClose;
+    private Pane menuClose;
+
+    @FXML
+    private Label menu, clickLabel;
 
     @FXML
     private VBox slider;
@@ -120,10 +124,15 @@ public class GraphController implements Initializable {
 
             slider.setTranslateX(-260);
 
-            slide.setOnFinished((ActionEvent e) -> {
-                menu.setVisible(false);
-                menuClose.setVisible(true);
-            });
+            TranslateTransition text = new TranslateTransition();
+            text.setDuration(Duration.seconds(0.4));
+            text.setNode(clickLabel);
+
+            text.setToX(-260);
+            text.play();
+
+            clickLabel.setTranslateX(0);
+            menu.setVisible(false);
         });
 
         menuClose.setOnMouseClicked(event -> {
@@ -136,9 +145,17 @@ public class GraphController implements Initializable {
 
             slider.setTranslateX(0);
 
+            TranslateTransition text = new TranslateTransition();
+            text.setDuration(Duration.seconds(0.4));
+            text.setNode(clickLabel);
+
+            text.setToX(0);
+            text.play();
+
+            clickLabel.setTranslateX(-260);
+
             slide.setOnFinished((ActionEvent e) -> {
                 menu.setVisible(true);
-                menuClose.setVisible(false);
             });
         });
     }
